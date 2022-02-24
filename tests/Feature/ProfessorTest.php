@@ -23,7 +23,7 @@ class ProfessorTest extends TestCase
         $array['idade_professor']          = $faker->numberBetween($min = 10, $max = 80);
         $array['name']                     = $faker->name();
         $array['sobre_nome']               = $faker->lastName();                                
-        $array['cpf_professor']            = $faker->cpf();
+        $array['cpf_professor']            = $faker->unique()->cpf();
         $array['formacao_professor']       = $faker->text(50);
         $array['instituicao_professor']    = $faker->text(150);
         $array['diploma_professor']        = $faker->text(150);
@@ -47,10 +47,10 @@ class ProfessorTest extends TestCase
 
 
     /** @test */
-    public function test_example()
+    public function creat_professor()
     {
 
-        for($i=0;$i<=500;$i++){
+        for($i=0;$i<=1000;$i++){
           
             $response = $this->POST('api/professor/store',$this->geraDados());
         }
@@ -59,26 +59,6 @@ class ProfessorTest extends TestCase
 
     }
 
-
-
-    /** @test */
-    public function get_aluno()
-    {
-    
-        $faker = Factory::create('pt_BR');
-            
-        for($i=0;$i<=100;$i++){
-    
-            $response = $this->JSON('GET','api/professor/show',[
-    
-                'id' =>  $faker->numberBetween($min = 1, $max = 10)
-    
-            ]);
-    
-        }
-        $response->assertStatus(200);
-    
-    }
 
 
 

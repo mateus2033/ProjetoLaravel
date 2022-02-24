@@ -20,7 +20,7 @@ class AlunoTest extends TestCase
         $array['email']                = $faker->unique()->safeEmail();
         $array['password']             = $faker->password();
         $array['idade_aluno']          = $faker->numberBetween($min = 1, $max = 10);
-        $array['cpf_aluno']            = $faker->cpf();
+        $array['cpf_aluno']            = $faker->unique()->cpf();
         $array['escolaridade_aluno']   = $faker->text(50);
         $array['curiosidades_aluno']   = $faker->text(50);
         $array['objetivos_aluno']      = $faker->text(50);
@@ -46,7 +46,7 @@ class AlunoTest extends TestCase
     public function create_aluno()
     {
         
-        for($i=0;$i<=50;$i++){
+        for($i=0;$i<=1000;$i++){
 
             $response = $this->post('api/aluno/store', $this->geraDados());
 
@@ -56,26 +56,6 @@ class AlunoTest extends TestCase
     }
 
 
-    
-
-    /** @test */
-    public function get_aluno()
-    {
-
-        $faker = Factory::create('pt_BR');
-        
-        for($i=0;$i<=100;$i++){
-
-            $response = $this->JSON('GET','api/aluno/show',[
-
-                'id' =>  $faker->numberBetween($min = 1, $max = 10)
-
-            ]);
-
-        }
-        $response->assertStatus(200);
-
-    }
 
 
 }

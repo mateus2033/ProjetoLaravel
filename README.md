@@ -47,7 +47,7 @@ O projeto possui a parte de Aluno e Professor, sendo que cada uma das partes pos
 
 <h1>Uso</h1>
 
-<p>Pege na raiz do projeto uma pasta chamada 'vox-Json-Projeto', nela está um Json para o uso de todas as rotas criadas no projeto. Pegue esses arquivos e os importe para o INSOMNIA</p>
+<p>Use no INSOMNIA os arquivos localizados na pasta 'vox-Json-Projeto' na raiz do projeto. Os arquivos contém os dados para a utilização do projeto.</p>
 <br>
 
     * crud-aluno: temos as rotas para, Criação, Deleção, Atualização, Busca e Listagem de todos os cadastros de Aluno.
@@ -59,14 +59,21 @@ O projeto possui a parte de Aluno e Professor, sendo que cada uma das partes pos
     * crud-marcar-aula: temos as rotas para marcar e desmarcar uma aula por parte do Aluno.
 
     * crud-add-calendario-aula: Temos as rotas para, caso um professor tenha adicionado uma aula a sua lista de aulas, assim podemos adicionar os dias de disponibilidade.
+
+
+
+    OBS: É importante que seja efetuado o cadastro de alunos e professores antes de consumir as demais rotas do projeto.
      
 <br>
 
 
 
+<h1>PHPunit</h1>
 
+Foram criadas funções que consomem as rotas de criação de alunos e professores com dados falsos.
+Para usar basta digitar o comando abaixo no terminal.
 
-
+    * ./vendor/bin/phpunit
 
 
 
