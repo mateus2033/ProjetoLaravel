@@ -4,17 +4,18 @@
 
 PROJETO COM O OBJETIVO DE TESTAR MEUS CONHECIMENTOS EM LARAVEL/PHP. 
 
+
+    Tenha instalado no seu computador os seguintes itens.
+
     * PHP 7.4
     * Composer 2.2
     * Laravel 8
     * MySql
 
-    Logo é necessario que se tenha instalados os seguintes itens citados acima.
-
 
 <br>
 
-<h1>Instalação</h1>
+<h1>Instalação das dependências do projeto</h1>
 
 Use os seguintes comandos para o funcionamento da aplicação.
     
